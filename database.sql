@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS flask_students
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE flask_students;
+
+CREATE TABLE IF NOT EXISTS students (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(120) NOT NULL UNIQUE,
+  department VARCHAR(100) NOT NULL
+);
